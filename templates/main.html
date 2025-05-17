@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Main_Page</title>
-
+    <title>Сводка Wildberries</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body>
-  <h1> this is main page </h1>
-  <iframe src=\"http://localhost:8501\" width=\"800\" height=\"600\"></iframe>
-  <div class="logout">
-    <button onclick="location.href='index.html'">Logout</button>
-  </div>
-
-<div class="menu">
-  <button>Услуга 1</button>
-  <button>Услуга 2</button>
-  <button>Услуга 3</button>
-  <button>Услуга 4</button>
-</div>
-
-<footer>
-    <h3>FOOTER</h3>
-</footer>
+<body class="container mt-4">
+    <h1>Сводная таблица операций</h1>
+    <div>
+        {{ table|safe }}
+    </div>
 </body>
 </html>
