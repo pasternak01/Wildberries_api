@@ -1,0 +1,8 @@
+.table {
+    color: red;
+    background-color: red;
+}
+.table-striped {
+    background-color: blue !important;
+    color: white;
+}

@@ -57,4 +57,5 @@ venv.bak/
 .idea/
 *.iml
 
+Temp/
 /Temp/
