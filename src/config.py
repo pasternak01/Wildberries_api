@@ -76,6 +76,7 @@ fin_df_columns_to_drop_by_WB_recommendation = [
 ]
 
 columns_eng_ru_dict = {
+    "item_type": "Предмет",
     "code": "Код_номенклатуры",
     "brand": "Бренд",
     "supplier_article": "Артикул_поставщика",
@@ -88,6 +89,7 @@ columns_eng_ru_dict = {
     "sale_date": "Дата_продажи",
     "quantity": "Кол-во",
     "retail_price": "Цена_розничная",
+    "retail_price_discount": "Цена_розничная_с_учетом_согласованной_скидки",
     "kvv_percent": "Размер_кВВ,_%",
     "acquiring_payment_commission": "Эквайринг/Комиссии_за_организацию_платежей",
     "acquiring_payment_commission_percent": "Размер_комиссии_за_эквайринг/Комиссии_за_организацию_платежей,_%",
