@@ -1,7 +1,19 @@
 import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+import seaborn as sns
 
 from src.config import columns_eng_ru_dict
 
+
+def columns_eng_to_rus(eng_cols : list):
+    """
+    Для красоты отображения в таблицах приложения,
+     меняем англ. названия колонок на русский
+    :param eng_cols: Колонки датафрейма df.columns
+    :return: Заменяем на Русские названия и меняем _ на пробел
+    """
+    return [columns_eng_ru_dict[col].replace("_", " ") for col in eng_cols]
 
 def columns_del_and_rename(df:pd.DataFrame):
     """
@@ -25,4 +37,15 @@ def columns_del_and_rename(df:pd.DataFrame):
     print(col_to_drop_list)
     df = df.drop(columns=col_to_drop_list)
     df.columns = eng_dict.keys()
+    return df
+
+
+
+
+def return_goods_data(df: pd.DataFrame):
+    """принимает датафрейм отдает датафрейм по возвратам
+    JUPITER - 2.3.1"""
+    df = df[df["number_of_returns"] > 0].groupby(["item_type", "name"])[
+        ["number_of_returns", "delivery_services"]
+    ].sum().sort_values(by="number_of_returns",ascending=False).reset_index()
     return df

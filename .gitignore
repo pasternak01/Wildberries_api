@@ -59,4 +59,6 @@ venv.bak/
 
 Temp/
 /Temp/
-uploaded_files
+uploaded_files/
+session_id.txt
+/pages/99_Temp.py

@@ -43,6 +43,7 @@ disable_data_processing = False # TODO Удалить в финальной ве
 st.page_link("st_main.py", label="Home", icon="🏠")
 st.page_link("pages/01_Load_Files.py", label="Загрузка файлов", icon="1️⃣")
 st.page_link("pages/02_Summary_Data.py", label="Сводные данные", icon="2️⃣", disabled=disable_data_processing)
+st.page_link("pages/99_Temp.py", label="temp", icon="2️⃣", disabled=False) #TODO DEL THIS
 st.page_link("http://www.google.com", label="Google", icon="🌎")
 
 sentiment_mapping = ["one", "two", "three", "four", "five"]

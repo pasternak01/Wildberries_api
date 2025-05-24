@@ -51,7 +51,11 @@ if fin_data_file is not None:
     with open(fin_data_path, "wb") as f:
         f.write(fin_data_file.getbuffer())
     st.success(f"Файл '{fin_data_file.name}' успешно загружен и сохранён.")
+
     # Здесь можно добавить обработку файла
+print(session_id)
+if os.path.exists(os.path.join(UPLOAD_DIR, f'fin_data_file_{session_id}.xlsx')):
+    st.success("✅ Файл текущей сессии загружен")
 st.divider()
 # =====================================================================
 
@@ -91,6 +95,9 @@ if cost_data_file is not None:
     if cost_errors[0] > 0:
         st.warning(f'В таблице есть пропущеные значения! Количество: {cost_errors[0]}')
         st.dataframe(cost_errors[1])
+
+if os.path.exists(os.path.join(UPLOAD_DIR, f'cost_data_file_{session_id}.xlsx')):
+    st.success("✅ Файл текущей сессии загружен")
 
 st.divider()
 # =====================================================================
